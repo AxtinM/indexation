@@ -1,12 +1,15 @@
 # Indexation
+
 `language : French`
+
 ### Methode : Indexation inversé
+
 -- Lire --
 l'objectif est de rechercher des mots-clés dans un grand nombre de documents ou corpus.
- 
-| Language utilisé | Bibliothèques  | 	Scripts			 | 
-|-------- | ---------- | --------------- | ---------- |
-| Python  | **pickle**--**os**--**sys** 	 	 | `pickling.py`/`main.py` |
+
+| Language utilisé | Bibliothèques               | Scripts                 |
+| ---------------- | --------------------------- | ----------------------- |
+| Python           | **pickle**--**os**--**sys** | `pickling.py`/`main.py` |
 
 ---
 
@@ -14,22 +17,21 @@ l'objectif est de rechercher des mots-clés dans un grand nombre de documents ou
 
 > vous devez installer pipenv un gestionnaire d'environnement pour Python
 
- - `git clone` *repo*
- - `pipenv shell` *(lancement de l'environnement python)*
- - `cd src`
+- `git clone` _repo_
+- `pipenv shell` _(lancement de l'environnement python)_
+- `cd src`
 
 ### Essais
 
 > Cette section sera mise à jour.
- - `python pickling.py ../documents` *(créer un index inversé et le stocker dans un fichier binaire)*
- - `python main.py "query"` *(query expl : hello and cool)*
 
+- `python pickling.py ../documents` _(créer un index inversé et le stocker dans un fichier binaire)_
+- `python main.py "query"` _(query expl : hello and cool)_
 
 ### analyse
 
 > `pickling.py`
 
-    
     if __name__ == "__main__":
 
     """
@@ -49,30 +51,29 @@ l'objectif est de rechercher des mots-clés dans un grand nombre de documents ou
 
     with open("./pickle.pkl", "wb") as pkl:
         pickle.dump(index.doc, pkl)
-	 
+
 
 > `main.py`
 
     if __name__ == "__main__":
     # arg_1 -> requête
     arg_1 = sys.argv[1]
-	
-	# récupérer les information du fichier pickle.pkl et rechercher ensuite dans l'index
+
+    # récupérer les information du fichier pickle.pkl et rechercher ensuite dans l'index
     search_obj = SearchInvertedIndex("./pickle.pkl", arg_1)
-	# affichage du resultat
+    # affichage du resultat
     print(search_obj.search_index())
-----------    
+
+---
 
 #### SearchInvertedIndex Class
 
-[SearchInvertedIndex Class #1](./images/hello.png)
+[SearchInvertedIndex Class #1](https://github.com/AxtinM/indexation/blob/master/images/hello.png)
 
-[SearchInvertedIndex Class #2](./images/hello1.png)
+[SearchInvertedIndex Class #2](https://github.com/AxtinM/indexation/blob/master/images/hello1.png)
 
-----------
+---
 
 #### QueryMixin Class
-[QueryMixin Class](./images/hello2.png)
 
-	
-
+[QueryMixin Class](https://github.com/AxtinM/indexation/blob/master/images/hello2.png)
