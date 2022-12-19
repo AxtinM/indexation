@@ -52,7 +52,6 @@ l'objectif est de rechercher des mots-clés dans un grand nombre de documents ou
     with open("./pickle.pkl", "wb") as pkl:
         pickle.dump(index.doc, pkl)
 
-
 > `main.py`
 
     if __name__ == "__main__":
@@ -68,12 +67,12 @@ l'objectif est de rechercher des mots-clés dans un grand nombre de documents ou
 
 #### SearchInvertedIndex Class
 
-[SearchInvertedIndex Class #1](https://github.com/AxtinM/indexation/blob/master/images/hello.png)
+![SearchInvertedIndex Class #1](images/hello.png)
 
-[SearchInvertedIndex Class #2](https://github.com/AxtinM/indexation/blob/master/images/hello1.png)
+![SearchInvertedIndex Class #2](images/hello1.png)
 
 ---
 
 #### QueryMixin Class
 
-[QueryMixin Class](https://github.com/AxtinM/indexation/blob/master/images/hello2.png)
+![QueryMixin Class](images/hello2.png)
