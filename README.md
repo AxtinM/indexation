@@ -21,7 +21,7 @@ l'objectif est de rechercher des mots-clés dans un grand nombre de documents ou
 - `pipenv shell` _(lancement de l'environnement python)_
 - `cd src`
 
-### Essais
+### Test
 
 > Cette section sera mise à jour.
 
