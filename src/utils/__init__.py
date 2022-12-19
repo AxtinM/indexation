@@ -1,2 +1,2 @@
 from .utility import IndexUtil
-from .search_mixin import QueryMixin, SearchMixin
+from .search_mixin import QueryMixin, SearchInvertedIndex

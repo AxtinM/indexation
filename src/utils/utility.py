@@ -12,11 +12,15 @@ class IndexUtil:
             # tokenize words in each file
             words = regexp_tokenize(f.read(), pattern="[A-Za-z]+")
             for word in words:
+                word = word.lower()
+                file_name = file_path.replace("\n", "")
                 # update doc with word : file1, file2, ...
                 if word in self.doc:
-                    self.doc[word].append(file_path.replace("\n", ""))
+                    if file_name in self.doc[word]:
+                        continue
+                    self.doc[word].append(file_name)
                 else:
-                    self.doc.update({word: [file_path.replace("\n", "")]})
+                    self.doc.update({word: [file_name]})
 
     def make_index(self):
         """ open .lst file and run file_tokenization() on each file. """
